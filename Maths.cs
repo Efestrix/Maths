@@ -7,8 +7,16 @@ Random rnd = new Random();
 int num1 = rnd.Next(1, 100);
 int num2 = rnd.Next(1, 100);
 
-string[] teachers = new string[3] { "Karel", "Hana", "Michal" };
+string teacher1 = "Karel";
+string teacher2 = "Hana";
+string teacher3 = "Michal";
+
+string[] teachers = { teacher1, teacher2, teacher3 };
 char operace = Console.ReadLine()[0];
+
+int randomIndex = rnd.Next(0, teachers.Length);
+
+string exitString = teachers[randomIndex];
 
 
 
@@ -18,14 +26,14 @@ foreach (string name in teachers)
     string currentTeacher = name;
 
     if (currentTeacher == "Karel")
-        Console.WriteLine($"{currentTeacher}: vrhneme se na prvni priklad");
+        Console.WriteLine($"{exitString}: vrhneme se na prvni priklad");
 
 
     else if (currentTeacher == "Hana")
-             Console.WriteLine($"{currentTeacher}: pojdme pocitat");
+             Console.WriteLine($"{exitString}: pojdme pocitat");
 
     else if (currentTeacher == "Michal")
-        Console.WriteLine($"{currentTeacher}: pojdme na matiku");
+        Console.WriteLine($"{exitString}: pojdme na matiku");
 
 }
 
